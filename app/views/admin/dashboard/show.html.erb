@@ -1,2 +1,24 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+<br>
+<ul class="list-group">
+  <li class="list-group-item stats-row">
+    <div class="stats">There are currently <%= @products %> Products being sold</div>
+    <div>
+        <%= link_to 'View Products', :admin_products, class:"btn btn-primary view-products"%>
+    </div>
+  </li>
+  <li class="list-group-item stats-row">
+    <div class="stats">There are currently <%= @categories %> Categories of products </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle toggle-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+        <% Category.all.each do |category| %>
+          <li><%= link_to category.name, category %></li>
+        <% end %>
+      </ul>
+    </div>
+  </li>
+</ul>
