@@ -1,8 +1,11 @@
 class Admin::CategoriesController < ApplicationController
+  
+  # index all existing categories
   def index
     @categories = Category.order(id: :desc).all
   end
 
+  # create a blank category
   def new
     @category = Category.new
   end
@@ -20,6 +23,7 @@ class Admin::CategoriesController < ApplicationController
 
   private
 
+  # security function for parameter passed into Category.new
   def category_params
     params.require(:category).permit(
       :name
