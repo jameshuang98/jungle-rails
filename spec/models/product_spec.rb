@@ -19,7 +19,7 @@ RSpec.describe Product, type: :model do
       end
     end
 
-    context "Checks the validations for the Product model" do
+    context "Check the validations for the Product model" do
       
       it "it is not valid without a name" do
         @product.name = nil
