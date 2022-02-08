@@ -5,7 +5,8 @@ RSpec.describe User, type: :model do
     
     before(:each) do
       @user = User.new(
-        name: "username",
+        first_name: "user",
+        last_name: "name",
         email: "test@test.com",
         password: "password",
         password_confirmation: "password"
@@ -45,7 +46,8 @@ RSpec.describe User, type: :model do
       it "it is not valid if email already exists in database" do
         
         user2 = User.new(
-          name: "username2",
+          first_name: "user",
+          last_name: "name",
           email: "test@test.com",
           password: "password",
           password_confirmation: "password"
@@ -58,7 +60,8 @@ RSpec.describe User, type: :model do
       it "it is not valid if email (with different casing) already exists in database" do
         
         user3 = User.new(
-          name: "username2",
+          first_name: "user",
+          last_name: "name",
           email: "TEST@TEST.com",
           password: "password",
           password_confirmation: "password"
@@ -73,16 +76,16 @@ RSpec.describe User, type: :model do
     context "Check that email, first name, and last name are not blank" do
       
       it "it is not valid without a name" do
-        @user.name = nil
+        @user.first_name = nil
         expect(@user).to_not be_valid 
-        expect(@user.errors.full_messages).to include("Name can't be blank") 
+        expect(@user.errors.full_messages).to include("First name can't be blank") 
       end
 
-      # it "it is not valid without a last name" do
-      #   @user.last_name = nil
-      #   expect(@user).to_not be_valid 
-      #   expect(@user.errors.full_messages).to include("Last name can't be blank") 
-      # end
+      it "it is not valid without a last name" do
+        @user.last_name = nil
+        expect(@user).to_not be_valid 
+        expect(@user.errors.full_messages).to include("Last name can't be blank") 
+      end
 
       it "it is not valid without a email" do
         @user.email = nil
@@ -108,7 +111,8 @@ RSpec.describe User, type: :model do
 
       before(:each) do
         @person = User.create(
-          name: "person",
+          first_name: "person",
+          last_name: "person",
           email: "RSpec@test.com",
           password: "password",
           password_confirmation: "password"
