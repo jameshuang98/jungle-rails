@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'images'
 
-RSpec.feature "Visitor navigates from home page to the product detail page", type: :feature, js: true do
+RSpec.feature "User clicks 'Add to Cart' for a product on the home page", type: :feature, js: true do
 
   #SETUP
   before :each do
@@ -18,17 +18,17 @@ RSpec.feature "Visitor navigates from home page to the product detail page", typ
     end
   end
 
-  scenario "They click on a product and see all product details" do
+  scenario "They click 'Add to Cart' and see cart increase by one" do
     # ACT
     visit root_path
-    find("article.product a.btn", match: :first).click
+    find("article.product button.btn", match: :first).click
     
     # DEBUG
     # sleep 3
     # save_screenshot
 
     # VERIFY
-    expect(page).to have_css '.product-detail'
+    expect(page).to have_content('My Cart (1)')
   end
 
 
