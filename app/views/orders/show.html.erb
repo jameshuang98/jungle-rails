@@ -33,14 +33,16 @@
           <%= humanized_money_with_symbol  @order.total_cents / 100.0%>
         </th>
       </tr>
-      <tr>
-      <th colspan="4">
-        EMAIL USED:
-      </th>
-      <th>
-        <%= @order.email %>
-      </th>
-    </tr>
+      <% if logged_in? %>
+        <tr>
+          <th colspan="4">
+            EMAIL USED:
+          </th>
+          <th>
+            <%= current_user.email %>
+          </th>
+        </tr>
+      <% end %>
     </tfoot>
   </table>
 </div>
