@@ -5,23 +5,23 @@ A mini e-commerce application built with Rails 4.2 that allows users to browse f
 
 ## Screenshots of App
 
-##### <h4>Screenshot of Product Page:</h4>
+##### <h4>Screenshot of Product Page: </h4>
 
-!["Screenshot of Product Page"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/products.png?raw=true)
+!["Screenshot of Product Page"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/products_page.png?raw=true)
 
-##### <h4>Screenshot of Empty Cart Warning:</h4>
+##### <h4>Screenshot of Empty Cart Warning: </h4>
 
 !["Screenshot of Empty Cart Warning"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/empty_cart.png?raw=true)
 
-##### <h4>Screenshot of Cart:</h4>
+##### <h4>Screenshot of Cart: </h4>
 
 !["Screenshot of Cart"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/cart.png?raw=true)
 
-##### <h4>Screenshot of Order Purchase:</h4>
+##### <h4>Screenshot of Order Purchase: </h4>
 
 !["Screenshot of Order Purchase"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/order_details.png?raw=true)
 
-##### <h4>Screenshot of Admin Products Page:</h4>
+##### <h4>Screenshot of Admin Products Page: </h4>
 
 !["Screenshot of Admin Products Page"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/admin_products.png?raw=true)<br>
 
