@@ -76,19 +76,19 @@ RSpec.describe User, type: :model do
     context "Check that email, first name, and last name are not blank" do
       
       it "it is not valid without a name" do
-        @user.first_name = nil
+        @user.first_name = ""
         expect(@user).to_not be_valid 
         expect(@user.errors.full_messages).to include("First name can't be blank") 
       end
 
       it "it is not valid without a last name" do
-        @user.last_name = nil
+        @user.last_name = ""
         expect(@user).to_not be_valid 
         expect(@user.errors.full_messages).to include("Last name can't be blank") 
       end
 
       it "it is not valid without a email" do
-        @user.email = nil
+        @user.email = ""
         expect(@user).to_not be_valid
         expect(@user.errors.full_messages).to include("Email can't be blank")
       end
@@ -122,27 +122,27 @@ RSpec.describe User, type: :model do
       context "Check that .authenticate_with_credentials works" do
       
         it "it works with valid credentials" do
-          expect(User.authenticate_with_credentials("RSpec@test.com", "password")).to eq(@person)
+          expect(User.authenticate_with_credentials(@person.email, @person.password)).to eq(@person) # matcher
         end
 
         it "it doesn't with invalid email" do
-          expect(User.authenticate_with_credentials("RSpec@test.test.com", "password")).to_not eq(@person)
+          expect(User.authenticate_with_credentials("RSpec@test.test.com", @person.password)).to_not eq(@person)
         end
 
         it "it doesn't with invalid password" do
-          expect(User.authenticate_with_credentials("RSpec@test.com", "passwordword")).to_not eq(@person)
+          expect(User.authenticate_with_credentials(@person.email, "passwordword")).to_not eq(@person)
         end
 
         it "it still works if there are leading spaces" do
-          expect(User.authenticate_with_credentials("   RSpec@test.com", "password")).to eq(@person)
+          expect(User.authenticate_with_credentials("   RSpec@test.com", @person.password)).to eq(@person)
         end
 
         it "it still works if there are trailing spaces" do
-          expect(User.authenticate_with_credentials("RSpec@test.com   ", "password")).to eq(@person)
+          expect(User.authenticate_with_credentials("RSpec@test.com   ", @person.password)).to eq(@person)
         end
 
         it "it still works if email is typed with different casing" do
-          expect(User.authenticate_with_credentials("rsPec@TEST.com", "password")).to eq(@person)
+          expect(User.authenticate_with_credentials("rsPec@TEST.com", @person.password)).to eq(@person)
         end
 
       
