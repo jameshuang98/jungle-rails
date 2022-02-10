@@ -1,4 +1,5 @@
 class Admin::CategoriesController < Admin::BaseController
+  
   # index all existing categories
   def index
     @categories = Category.order(id: :desc).all
