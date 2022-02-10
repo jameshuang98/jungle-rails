@@ -5,20 +5,25 @@ A mini e-commerce application built with Rails 4.2 that allows users to browse f
 
 ## Screenshots of App
 
-##### <h4>Screenshot of Product Page</h4>
+##### <h4>Screenshot of Product Page:</h4>
+
 !["Screenshot of Product Page"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/products.png?raw=true)
 
-##### <h4>Screenshot of Empty Cart Warning</h4>
+##### <h4>Screenshot of Empty Cart Warning:</h4>
+
 !["Screenshot of Empty Cart Warning"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/empty_cart.png?raw=true)
 
-##### <h4>Screenshot of Cart</h4>
+##### <h4>Screenshot of Cart:</h4>
+
 !["Screenshot of Cart"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/cart.png?raw=true)
 
-##### <h4>Screenshot of Order Purchase</h4>
+##### <h4>Screenshot of Order Purchase:</h4>
+
 !["Screenshot of Order Purchase"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/order_details.png?raw=true)
 
-##### <h4>Screenshot of Admin Products Page</h4>
-!["Screenshot of Admin Products Page"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/adminproducts.png?raw=true)
+##### <h4>Screenshot of Admin Products Page:</h4>
+
+!["Screenshot of Admin Products Page"](https://github.com/jameshuang98/jungle-rails/blob/master/app/assets/images/admin_products.png?raw=true)<br>
 
 
 ## Getting Started
@@ -29,6 +34,7 @@ A mini e-commerce application built with Rails 4.2 that allows users to browse f
 1. Install ImageMagick `brew install imagemagick imagemagick@6 --build-from-source`
 2. Remove Gemfile.lock
 3. Replace Gemfile with version provided [here](https://gist.githubusercontent.com/FrancisBourgouin/831795ae12c4704687a0c2496d91a727/raw/ce8e2104f725f43e56650d404169c7b11c33a5c5/Gemfile)
+
 
 ### Setup
 
